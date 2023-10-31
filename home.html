@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to ClarkU Research!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://s28151.pcdn.co/offices/marketing-and-communications/wp-content/blogs.dir/3/files/sites/106/2019/08/CU_Seal_Red_SM_60_75_v4-300x300.png') center center; /* Set the background image */
+            background-size: 250px; /* Set the background image size */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #990000; /* Red text color */
+            background-color: #ffffff; /* White background */
+            margin: 0; /* Remove default margin to fit logo */
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            color: #000000; /* Black text color */
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #990000; /* Red background */
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #5c0000; /* Darker red on hover */
+        }
+
+        .footer {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            color: #000000; /* Black text color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to ClarkU Research!</h1>
+    <p class="description">The goal of this project was to create a centralized location for professors to list research opportunities.</p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Find Research</a>
+
+    <div class="footer">
+        Designed by Amechi Aduba, Diego Marin, Luke Sheldon, and Mauro Perez Colon
+    </div>
+</body>
+</html>

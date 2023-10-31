@@ -1,0 +1,52 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+}
+
+/* Header styles */
+header {
+    background-color: #990000; /* Scarlet background */
+    color: #ffffff; /* White text color */
+    text-align: center;
+}
+
+/* H1 styles */
+h1 {
+    font-size: 24px;
+}
+
+/* Input and select styles */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table header styles */
+th {
+    background-color: #990000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Table cell styles */
+td {
+    padding: 10px;
+}
+
+/* Link styles */
+a {
+    color: #990000; /* Scarlet link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

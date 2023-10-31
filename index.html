@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research List</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <style>
+        /* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+}
+
+/* Header styles */
+header {
+    background-color: #990000; /* Red background */
+    color: #ffffff; /* White text color */
+    text-align: center;
+}
+
+/* H1 styles */
+h1 {
+    font-size: 24px;
+    color: #990000; /* Red text color */
+}
+
+/* Input and select styles */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table header styles */
+th {
+    background-color: #990000; /* Red background */
+    color: #ffffff; /* White text color */
+    font-weight: bold;
+}
+
+/* Table cell styles */
+td {
+    padding: 10px;
+}
+
+/* Link styles */
+a {
+    color: #990000; /* Red link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research Finder</h1>
+    </header>
+
+    <main>
+        <label for="search_Teacher-1">Search Professor</label>
+        <input type="search" id="search_Teacher-1">
+
+        <select name="major_list" id="major_list" onchange="filterTable()">
+            <option value="">Major</option>
+            <option value="Accounting">ACCT - Accounting</option>
+                                        <option value="Africana Studies">AFRC - Africana Studies</option>
+                                        <option value="Arabic">ARAB - Arabic</option>
+                                        <option value="Art History">ARTH - Art History</option>
+                                        <option value="Art Studio">ARTS - Art Studio</option>
+                                        <option value="Astronomy">ASTR - Astronomy</option>
+                                        <option value="Asian Studies">AS - Asian Studies</option>
+                                        <option value="Business Analytics">BAN - Business Analytics</option>
+                                        <option value="Biochem and Molecular Biology">BCMB - Biochem and Molecular Biology</option>
+                                        <option value="Business Communication">BCOM - Business Communication</option>
+                                        <option value="Biology or Environmental Science">BIOL - Biology</option>
+                                        <option value="Business Law">BLAW - Business Law</option>
+                                        <option value="Chemistry">CHEM - Chemistry</option>
+                                        <option value="Chinese">CHIN - Chinese</option>
+                                        <option value="Classics">CLAS - Classics</option>
+                                        <option value="Comparative Literature">CMLT - Comparative Literature</option>
+                                        <option value="Comparative Race">CRES - Comparative Race &amp; Ethnic Stds</option>
+                                        <option value="Creative Writing">CRW - Creative Writing</option>
+                                        <option value="Computer Science">CSCI - Computer Science</option>
+                                        <option value="Community Youth">CYES - Community Youth &amp; Educ Studies</option>
+                                        <option value="Data Science">DSCI - Data Science</option>
+                                        <option value="Economics">ECON - Economics</option>
+                                        <option value="Education">EDUC - Education</option>
+                                        <option value="English">ENG - English</option>
+                                        <option value="Entrepreneurship">ENT - Entrepreneurship</option>
+                                        <option value="Environmental Science">EN - Environmental Science</option>
+                                        <option value="Ethics">EPP - Ethics and Public Policy</option>
+                                        <option value="ESL">ESL - English as a Second Language</option>
+                                        <option value="Finance">FIN - Finance</option>
+                                        <option value="French">FREN - French</option>
+                                        <option value="Game-Interactive Media">GAME - Game-Interactive Media</option>
+                                        <option value="Game Arts">GART - Game Arts</option>
+                                        <option value="Game Computer Programming">GCPT - Game Computer Programming</option>
+                                        <option value="Geography">GEOG - Geography</option>
+                                        <option value="German">GERM - German</option>
+                                        <option value="Global Environmental Studies">GES - Global Environmental Studies</option>
+                                        <option value="Game Graphic Design">GGRA - Game Graphic Design</option>
+                                        <option value="Hebrew">HEBR - Hebrew</option>
+                                        <option value="Holocaust & Genocide Studies">HGS - Holocaust &amp; Genocide Studies</option>
+                                        <option value="History">HIST - History</option>
+                                        <option value="HSS">HSS - Health, Science &amp; Society</option>
+                                        <option value="Humanities">HS - Higgins School of Humanities</option>
+                                        <option value="IDCE">IDCE - Int&#39;l Dev&#39;l, Community, Envir</option>
+                                        <option value="IDND">IDND - Interdepart/Nondept/Interdis</option>
+                                        <option value="ID">ID - International Development</option>
+                                        <option value="Japanese">JAPN - Japanese</option>
+                                        <option value="Jewish Studies">JS - Jewish Studies</option>
+                                        <option value="LALS">LALS - Latin American-Latinx Studies</option>
+                                        <option value="Law and Society">LAS - Law and Society</option>
+                                        <option value="LAT">LAT - Latin</option>
+                                        <option value="Mathematics">MATH - Mathematics</option>
+                                        <option value="MCA">MCA - Media, Culture &amp; the Arts</option>
+                                        <option value="Management">MGMT - Management</option>
+                                        <option value="Marketing">MKT - Marketing</option>
+                                        <option value="Music">MUSC - Music</option>
+                                        <option value="NRES">NRES - Nonresident Graduate Student</option>
+                                        <option value="PECO">PECO - Peace and Conflict Studies</option>
+                                        <option value="Philosophy">PHIL - Philosophy</option>
+                                        <option value="Physics or Engineering">PHYS - Physics</option>
+                                        <option value="Political Science">PSCI - Political Science</option>
+                                        <option value="Psychology">PSYC - Psychology</option>
+                                        <option value="Quantitative Business">QBUS - Quantitative Business</option>
+                                        <option value="Screen Studies">SCRN - Screen Studies</option>
+                                        <option value="SOC">SOC - Sociology</option>
+                                        <option value="Spanish">SPAN - Spanish</option>
+                                        <option value="Theater Arts">TA - Theater Arts</option>
+                                        <option value="UDSC">UDSC - Urban Devl Social Change</option>
+                                        <option value="WGS">WGS - Women&#39;s and Gender Studies</option>
+            <!-- Include all major options here -->
+        </select>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Department</th>
+                    <th>Professor</th>
+                    <th>Professor Email</th>
+                    <th>Research Description</th>
+                    <th>Student Task</th>
+                    <th>Required Major</th>
+                </tr>
+            </thead>
+            <tbody id="teacher-1">
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.ID }}</td>
+                    <td>{{ item.Department }}</td>
+                    <td>{{ item.Professor }}</td>
+                    <td>{{ item.Email }}</td>
+                    <td>{{ item.Description }}</td>
+                    <td>{{ item.Task }}</td>
+                    <td>{{ item.Major }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        var search_Teacher1 = document.getElementById("search_Teacher-1");
+        var selectMajor = document.getElementById("major_list");
+        var teacher1 = document.getElementById('teacher-1');
+        var allRows = teacher1.getElementsByTagName('tr');
+
+        function filterTable() {
+            var keyword = search_Teacher1.value.toUpperCase();
+            var selectedMajor = selectMajor.value;
+
+            for (var i = 0; i < allRows.length; i++) {
+                var professorName = allRows[i].getElementsByTagName('td')[2];
+                var professorMajor = allRows[i].getElementsByTagName('td')[6];
+
+                if (professorName && professorMajor) {
+                    var nameValue = professorName.innerText.toUpperCase();
+                    var majorValue = professorMajor.innerText.trim();
+
+                    if (nameValue.indexOf(keyword) > -1 && (selectedMajor === "" || majorValue === selectedMajor)) {
+                        allRows[i].style.display = "";
+                    } else {
+                        allRows[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        search_Teacher1.addEventListener('keyup', filterTable);
+        selectMajor.addEventListener('change', filterTable);
+    </script>
+</body>
+</html>
